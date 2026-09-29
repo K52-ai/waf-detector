@@ -1,0 +1,261 @@
+{
+  "cloudflare": {
+    "name": "Cloudflare",
+    "type": "Cloud-based (CDN + WAF)",
+    "headers": {
+      "server": "cloudflare",
+      "cf-ray": "*",
+      "cf-cache-status": "*"
+    },
+    "cookies": ["__cfduid", "__cf_bm", "cf_clearance"],
+    "confidence": "high"
+  },
+  "aws_waf": {
+    "name": "AWS WAF",
+    "type": "Cloud-based",
+    "headers": {
+      "x-amzn-requestid": "*",
+      "x-amz-cf-id": "*",
+      "server": "awselb"
+    },
+    "cookies": ["aws-waf-token"],
+    "confidence": "high"
+  },
+  "sucuri": {
+    "name": "Sucuri",
+    "type": "Cloud-based",
+    "headers": {
+      "x-sucuri-id": "*",
+      "x-sucuri-cache": "*",
+      "server": "sucuri"
+    },
+    "cookies": ["sucuri_cloudproxy_uuid"],
+    "confidence": "high"
+  },
+  "imperva": {
+    "name": "Imperva Incapsula",
+    "type": "Cloud-based",
+    "headers": {
+      "x-iinfo": "*",
+      "x-cdn": "*",
+      "server": "incapsula"
+    },
+    "cookies": ["incap_ses_", "visid_incap_", "nlbi_"],
+    "confidence": "high"
+  },
+  "akamai": {
+    "name": "Akamai",
+    "type": "Cloud-based",
+    "headers": {
+      "x-akamai-transformed": "*",
+      "server": "akamaighost"
+    },
+    "cookies": ["ak_bmsc", "bm_sv", "_abck"],
+    "confidence": "high"
+  },
+  "f5_bigip": {
+    "name": "F5 BIG-IP",
+    "type": "Network-based",
+    "headers": {
+      "x-wa-info": "*",
+      "server": "big-ip"
+    },
+    "cookies": ["ts01", "bigipserver", "f5_cspm"],
+    "confidence": "high"
+  },
+  "barracuda": {
+    "name": "Barracuda WAF",
+    "type": "Network-based",
+    "headers": {
+      "server": "barracuda"
+    },
+    "cookies": ["barra_counter_session", "bnssession"],
+    "confidence": "high"
+  },
+  "fortiweb": {
+    "name": "Fortinet FortiWeb",
+    "type": "Network-based",
+    "headers": {
+      "server": "fortiweb"
+    },
+    "cookies": ["fortiwafsidd"],
+    "confidence": "high"
+  },
+  "modsecurity": {
+    "name": "ModSecurity",
+    "type": "Open-source (server module)",
+    "headers": {
+      "server": "modsecurity"
+    },
+    "body_patterns": ["mod_security", "ModSecurity", "Not Acceptable"],
+    "confidence": "medium"
+  },
+  "wordfence": {
+    "name": "Wordfence",
+    "type": "WordPress plugin",
+    "body_patterns": ["wordfence", "wfvt_", "Wordfence"],
+    "cookies": ["wfvt_"],
+    "confidence": "high"
+  },
+  "fastly": {
+    "name": "Fastly",
+    "type": "Cloud-based CDN",
+    "headers": {
+      "x-served-by": "*",
+      "x-cache": "*fastly*",
+      "server": "fastly"
+    },
+    "confidence": "high"
+  },
+  "azure_frontdoor": {
+    "name": "Azure Front Door",
+    "type": "Cloud-based",
+    "headers": {
+      "x-azure-ref": "*",
+      "x-fd-healthprobe": "*"
+    },
+    "confidence": "high"
+  },
+  "google_cloud_armor": {
+    "name": "Google Cloud Armor",
+    "type": "Cloud-based",
+    "headers": {
+      "server": "google frontend",
+      "via": "*google*"
+    },
+    "confidence": "medium"
+  },
+  "stackpath": {
+    "name": "StackPath",
+    "type": "Cloud-based",
+    "headers": {
+      "server": "stackpath"
+    },
+    "confidence": "high"
+  },
+  "reblaze": {
+    "name": "Reblaze",
+    "type": "Cloud-based",
+    "headers": {
+      "server": "reblaze"
+    },
+    "cookies": ["rbzid", "rbzsessionid"],
+    "confidence": "high"
+  },
+  "wallarm": {
+    "name": "Wallarm",
+    "type": "Cloud + Node",
+    "headers": {
+      "server": "nginx-wallarm"
+    },
+    "confidence": "high"
+  },
+  "a10": {
+    "name": "A10 Networks Thunder",
+    "type": "Network-based",
+    "headers": {
+      "server": "a10"
+    },
+    "confidence": "high"
+  },
+  "citrix_netscaler": {
+    "name": "Citrix NetScaler",
+    "type": "Network-based",
+    "headers": {
+      "via": "*netscaler*"
+    },
+    "cookies": ["citrix_ns_id", "ns_af"],
+    "confidence": "medium"
+  },
+  "radware": {
+    "name": "Radware AppWall",
+    "type": "Network-based",
+    "headers": {
+      "x-sl-compstate": "*"
+    },
+    "confidence": "high"
+  },
+  "denyall": {
+    "name": "DenyAll",
+    "type": "Network-based",
+    "headers": {
+      "server": "denyall"
+    },
+    "confidence": "high"
+  },
+  "comodo": {
+    "name": "Comodo WAF",
+    "type": "Cloud-based",
+    "headers": {
+      "server": "comodo"
+    },
+    "confidence": "high"
+  },
+  "sophos": {
+    "name": "Sophos UTM",
+    "type": "Network-based",
+    "headers": {
+      "server": "sophos"
+    },
+    "confidence": "high"
+  },
+  "edgecast": {
+    "name": "Edgecast (Verizon)",
+    "type": "Cloud-based",
+    "headers": {
+      "server": "ecs",
+      "x-cache": "*ecs*"
+    },
+    "confidence": "medium"
+  },
+  "360waf": {
+    "name": "360 WangZhanBao",
+    "type": "Cloud-based (Chinese)",
+    "headers": {
+      "x-powered-by-360wzb": "*"
+    },
+    "confidence": "high"
+  },
+  "alibaba_cloud": {
+    "name": "Alibaba Cloud WAF",
+    "type": "Cloud-based",
+    "headers": {
+      "server": "tengine"
+    },
+    "cookies": ["aliyungf_tc"],
+    "confidence": "medium"
+  },
+  "baidu_yunjiasu": {
+    "name": "Baidu Yunjiasu",
+    "type": "Cloud-based",
+    "headers": {
+      "server": "yunjiasu-nginx"
+    },
+    "confidence": "high"
+  },
+  "tencent_cloud": {
+    "name": "Tencent Cloud WAF",
+    "type": "Cloud-based",
+    "headers": {
+      "server": "tencent-cos"
+    },
+    "confidence": "medium"
+  },
+  "huawei_cloud": {
+    "name": "Huawei Cloud WAF",
+    "type": "Cloud-based",
+    "headers": {
+      "server": "huaweicloudwaf"
+    },
+    "confidence": "high"
+  },
+  "varnish": {
+    "name": "Varnish Cache",
+    "type": "Reverse proxy (not WAF)",
+    "headers": {
+      "x-varnish": "*",
+      "via": "*varnish*"
+    },
+    "confidence": "high"
+  }
+}
